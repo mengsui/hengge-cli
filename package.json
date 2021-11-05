@@ -1,0 +1,28 @@
+{
+  "name": "hengge-cli",
+  "version": "0.0.2",
+  "description": "hengge-cli",
+  "main": "index.js",
+  "bin": {
+    "hengge": "./bin/hengge.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengsui/hengge-cli.git"
+  },
+  "keywords": [
+    "hengge-cli"
+  ],
+  "author": "1198810568@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mengsui/hengge-cli/issues"
+  },
+  "homepage": "https://github.com/mengsui/hengge-cli#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
