@@ -2,6 +2,7 @@ const fs = require('fs');
 
 exports.run = function (name) {
   const dirName = name.substring(0, 1).toLowerCase() + name.substring(1);
+  const dirNameToUpperCase = name.substring(0, 1).toUpperCase() + name.substring(1);
 
   if (fs.existsSync(`./${dirName}`)) {
     console.log('安装失败！该路径已存在');
@@ -10,7 +11,7 @@ exports.run = function (name) {
 
   // 创建页面模版
   const indexTep = `<template>
-  <div class="${dirName}_page">
+  <div>
     
   </div>
 </template>
@@ -19,7 +20,7 @@ exports.run = function (name) {
 import { Options, Vue } from "vue-class-component";
 
 @Options({})
-export default class Home extends Vue {
+export default class ${dirNameToUpperCase} extends Vue {
   
 }
 </script>
@@ -28,7 +29,7 @@ export default class Home extends Vue {
 </style>
 `;
 
-  fs.writeFileSync(`${dirName}.vue`, indexTep);
+  fs.writeFileSync(`${dirNameToUpperCase}.vue`, indexTep);
   console.log('安装成功！');
   process.exit(0);
 };

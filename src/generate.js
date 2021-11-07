@@ -1,11 +1,14 @@
 
-const vue3templatePure = require('./scripts/vue3-template-pure');
-
+const vue3templateComponent = require('./scripts/vue3-template-component');
+const vue3templatePage = require('./scripts/vue3-template-page');
 
 exports.run = function (name, type) {
   switch (type) {
-    case 'vue3-template-pure':
-      vue3templatePure.run(name);
+    case 'vue3-template-component':
+      vue3templateComponent.run(name);
+      break;
+    case 'vue3-template-page':
+      vue3templatePage.run(name);
       break;
 
     default:

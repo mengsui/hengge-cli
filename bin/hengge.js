@@ -10,7 +10,7 @@ const run = () => {
         type: 'input',
         message: '设置文件名称:',
         name: 'name',
-        default: 'test', // 默认值
+        default: 'index', // 默认值
       },
       {
         type: 'list',
@@ -39,7 +39,8 @@ const run = () => {
         name: 'type',
         message: '请选择h5模版类型',
         choices: [
-          'vue3-template-pure',
+          'vue3-template-component',
+          'vue3-template-page',
         ],
         when: function (answers) { // 当watch为true的时候才会提问当前问题
           return answers.template == 'template';
